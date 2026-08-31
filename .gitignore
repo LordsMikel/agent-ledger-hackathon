@@ -1,0 +1,17 @@
+# Agent Ledger generated and local files.
+# Author: Miguel Medina Cantos
+
+.env
+.venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ruff_cache/
+
+# The prepared dataset is initialized from the repository-level input directory.
+input/
+
+# Runtime extraction artifacts are reproducible from the copied images.
+output/extracted/
+output/logs/
+output/vertex_batches/

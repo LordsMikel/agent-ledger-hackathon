@@ -1,0 +1,13 @@
+google-adk[gcp]<3.0,>=2.0
+google-cloud-aiplatform>=1.100
+google-cloud-firestore>=2.21
+google-cloud-storage>=3.0
+google-genai>=1.0
+loguru>=0.7
+Pillow>=11.0
+python-dotenv<2.0,>=1.0
+sentence-transformers>=5.0
+
+[dev]
+pytest>=8.0
+ruff>=0.9

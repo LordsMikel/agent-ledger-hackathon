@@ -1,0 +1,9 @@
+# Chat-only dependencies for the Agent Ledger Cloud Run image.
+# Author: Miguel Medina Cantos
+
+google-adk[gcp]==2.7.1
+google-cloud-firestore>=2.21,<3.0
+google-genai>=1.0
+loguru>=0.7,<1.0
+python-dotenv>=1.0,<2.0
+sentence-transformers>=5.0,<6.0

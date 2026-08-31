@@ -1,0 +1,21 @@
+# Upload only the chat runtime required by Cloud Build.
+# Author: Miguel Medina Cantos
+
+**
+!.gcloudignore
+!.dockerignore
+!Dockerfile
+!requirements-cloud-run.txt
+!config/
+!config/**
+!src/
+!src/**
+!adk_invoice_chat/
+!adk_invoice_chat/**
+
+# Runtime and credential material must never enter the Cloud Build context.
+.env
+adk_invoice_chat/.adk/session.db
+**/.adk/
+**/__pycache__/
+**/*.py[cod]

@@ -1,0 +1,48 @@
+[build-system]
+requires = ["setuptools>=75", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "agent-ledger"
+version = "0.1.0"
+description = "Multi-agent invoice extraction and Firestore vector-search application"
+readme = "README.md"
+requires-python = ">=3.11"
+authors = [{ name = "Miguel Medina Cantos" }]
+dependencies = [
+    "google-adk[gcp]>=2.0,<3.0",
+    "google-cloud-aiplatform>=1.100",
+    "google-cloud-firestore>=2.21",
+    "google-cloud-storage>=3.0",
+    "google-genai>=1.0",
+    "loguru>=0.7",
+    "Pillow>=11.0",
+    "python-dotenv>=1.0,<2.0",
+    "sentence-transformers>=5.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8.0",
+    "ruff>=0.9",
+]
+
+[project.scripts]
+agent-ledger = "src.main:main"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = [
+    "adk_invoice_chat*",
+    "config*",
+    "convert_batch*",
+    "index_batch_to_firestore*",
+    "src*",
+]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"

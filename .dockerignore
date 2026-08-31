@@ -1,0 +1,20 @@
+# Upload only the chat runtime required by the Dockerfile.
+# Author: Miguel Medina Cantos
+
+**
+!.dockerignore
+!Dockerfile
+!requirements-cloud-run.txt
+!config/
+!config/**
+!src/
+!src/**
+!adk_invoice_chat/
+!adk_invoice_chat/**
+
+# Runtime and credential material must never enter the image.
+.env
+adk_invoice_chat/.adk/session.db
+**/.adk/
+**/__pycache__/
+**/*.py[cod]
